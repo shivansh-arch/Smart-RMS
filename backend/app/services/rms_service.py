@@ -9,6 +9,9 @@ from app.ai.provider import AIProvider
 from app.ai.mock_provider import MockAIProvider
 from app.ai.gemini_provider import GeminiProvider
 from app.rag.retriever import PolicyRetriever
+from app.rag.chroma_store import ChromaVectorStore
+from app.rag.vector_store import MockVectorStore
+from app.rag.embeddings import get_embedding_provider
 from app.privacy.pii_redactor import PIIRedactor
 from app.privacy.policy_validator import PolicyValidator
 from app.workflows.workflow_engine import WorkflowEngine, TicketState
@@ -47,6 +50,7 @@ from app.schemas.grounding import (
 )
 from app.grounding import get_grounding_pipeline
 from app.telemetry import get_telemetry_service, TelemetryRecord
+from app.rag import vector_store
 
 class RMSService:
     """
@@ -69,7 +73,16 @@ class RMSService:
 
         # Initialize Core Subsystems
         self.privacy_redactor = PIIRedactor()
-        self.policy_retriever = PolicyRetriever()
+        if settings.VECTOR_STORE_TYPE == "chroma":
+            vector_store = ChromaVectorStore(
+                embedding_provider=get_embedding_provider()
+            )
+        else:
+            vector_store = MockVectorStore()
+
+        self.policy_retriever = PolicyRetriever(vector_store=vector_store)
+        print(f"[DEBUG] vector_store class: {type(vector_store).__name__}")
+        
         self.policy_validator = PolicyValidator()
         self.workflow = WorkflowEngine()
         self.grounding_pipeline = get_grounding_pipeline()
