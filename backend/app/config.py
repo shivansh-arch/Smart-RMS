@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     CORS_ORIGINS: Union[str, List[str]] = ["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"]
 
     # AI Configuration
-    AI_PROVIDER: str = "mock"  # "mock" or "gemini"
+    AI_PROVIDER: str = "gemini"  # "mock" or "gemini"
     NLP_MODEL_PROVIDER: str = "deterministic"  # "deterministic", "tfidf_logistic", "tfidf_svm", "sentence_transformer"
     CLAIM_VERIFIER_PROVIDER: str = "deterministic"  # "deterministic" or "nli"
     NLI_MODEL_NAME: str = "cross-encoder/nli-deberta-v3-xsmall"
