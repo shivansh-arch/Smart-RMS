@@ -3,9 +3,13 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+ml/registry/
 .Python
 env/
 venv/
+chroma_data/
+test_chroma_data/
+chroma_data/
 .venv/
 build/
 develop-eggs/
