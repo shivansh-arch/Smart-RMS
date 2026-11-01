@@ -43,5 +43,41 @@
     "actor_id": "USR-STAFF-99",
     "reason": "Student requires immediate grievance cell intervention",
     "timestamp": "2026-10-06T11:42:55.930193+00:00"
+  },
+  {
+    "ticket_id": "TKT-RMS-1001",
+    "original_ai_department": "Hostel Affairs",
+    "human_corrected_department": "Student Welfare",
+    "context_summary": "Water leakage and noisy AC unit in BH-4 Room 312",
+    "actor_id": "USR-STAFF-99",
+    "reason": "Student requires immediate grievance cell intervention",
+    "timestamp": "2026-10-27T09:09:47.272161+00:00"
+  },
+  {
+    "ticket_id": "TKT-RMS-1001",
+    "original_ai_department": "Hostel Affairs",
+    "human_corrected_department": "Student Welfare",
+    "context_summary": "Water leakage and noisy AC unit in BH-4 Room 312",
+    "actor_id": "USR-STAFF-99",
+    "reason": "Student requires immediate grievance cell intervention",
+    "timestamp": "2026-10-30T06:07:32.208785+00:00"
+  },
+  {
+    "ticket_id": "TKT-RMS-1001",
+    "original_ai_department": "Hostel Affairs",
+    "human_corrected_department": "Student Welfare",
+    "context_summary": "Water leakage and noisy AC unit in BH-4 Room 312",
+    "actor_id": "USR-STAFF-99",
+    "reason": "Student requires immediate grievance cell intervention",
+    "timestamp": "2026-10-30T08:25:28.803162+00:00"
+  },
+  {
+    "ticket_id": "TKT-RMS-1001",
+    "original_ai_department": "Hostel Affairs",
+    "human_corrected_department": "Student Welfare",
+    "context_summary": "Water leakage and noisy AC unit in BH-4 Room 312",
+    "actor_id": "USR-STAFF-99",
+    "reason": "Student requires immediate grievance cell intervention",
+    "timestamp": "2026-10-30T08:26:36.887442+00:00"
   }
 ]
